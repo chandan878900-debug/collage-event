@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Event Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>College Event Management System</h1>
+
+  <!-- LOGIN -->
+  <div id="login">
+    <h2>Login</h2>
+
+    <select id="role">
+      <option value="">Select Role</option>
+      <option value="admin">Admin</option>
+      <option value="student">Student</option>
+    </select><br>
+
+    <input type="text" id="username" placeholder="Enter Name"><br>
+
+    <button onclick="login()">Login</button>
+   
+
+  </div>
+
+   <!-- <div id="qrCode">anuj</div> -->
+
+  <!-- ADMIN PANEL -->
+  <div id="adminPanel" class="hidden">
+    <h2>Admin Dashboard</h2>
+
+    <h3>Create Event</h3>
+    <input type="text" id="eventName" placeholder="Event Name"><br>
+    <input type="date" id="eventDate"><br>
+    <button onclick="createEvent()" id="createEventBtn">Create Event</button>
+
+    <h3>Admin Analytics</h3>
+    <p>Total Events: <span id="totalEvents">0</span></p>
+    <p>Total Registrations: <span id="totalRegistrations">0</span></p>
+    <p>Total Attendance: <span id="totalAttendance">0</span></p>
+
+    <h3>All Events</h3>
+    <ul id="adminEvents"></ul>
+  </div>
+
+  <!-- STUDENT PANEL -->
+  <div id="studentPanel" class="hidden">
+    <h2>Student Dashboard</h2>
+    <ul id="studentEvents"></ul>
+    <br>
+  <button onclick="downloadCertificate()">🎓 Download Certificate</button>
+  <p id="certificateStatus">image</p>
+  </div>
+  
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+
+  <!-- <button id="createEventBtn">Create Event</button> -->
+
+</body>
+</html>
